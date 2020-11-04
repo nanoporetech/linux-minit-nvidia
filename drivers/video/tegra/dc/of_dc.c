@@ -156,6 +156,10 @@ struct tegra_panel_ops *tegra_dc_get_panel_ops(struct device_node *panel_np)
 		p_ops = &dsi_s_wuxga_8_0_ops;
 	else if (of_device_is_compatible(panel_np, "s,wuxga-7-0"))
 		p_ops = &dsi_s_wuxga_7_0_ops;
+	else if (of_device_is_compatible(panel_np, "ihl,1080p-5-5"))
+		p_ops = &dsi_ihl_1080p_5_5_ops;
+	else if (of_device_is_compatible(panel_np, "v,1080p-5-5"))
+		p_ops = &dsi_v_1080p_5_5_ops;
 	else if (of_device_is_compatible(panel_np, "o,720-1280-6-0"))
 		p_ops = &dsi_o_720p_6_0_ops;
 	else if (of_device_is_compatible(panel_np, "o,720-1280-6-0-01"))
